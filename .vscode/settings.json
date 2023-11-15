@@ -1,0 +1,6 @@
+{
+  "java.compile.nullAnalysis.mode": "automatic",
+  "maven.view": "flat",
+  "git.enabled": false,
+  "java.configuration.updateBuildConfiguration": "interactive"
+}
