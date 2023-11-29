@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Model/Theme.dart';
-import 'package:flutter_application_1/View/Page/Dashboard.dart';
-import 'package:flutter_application_1/View/Page/Homepage.dart';
+import 'package:flutter_application_1/View/Page/Home.dart';
 import 'package:flutter_application_1/View/Page/LoginPage.dart';
 import 'package:flutter_application_1/View/Widget/FormContainer.dart';
+import 'package:flutter_application_1/View/Widget/toast.dart';
 import 'package:flutter_application_1/services/FirebaseAuth.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -123,20 +123,19 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   void _signUp() async {
-    String username = _usernameController.text;
     String email = _emailController.text;
     String password = _passwordController.text;
 
     User? user = await _auth.signUpWithEmailAndPassword(email, password);
 
     if (user != null) {
-      print("User sukses dibuat");
+      showToast(message: "user berhasil dibuat");
       Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (context) => Dashboard()),
+          MaterialPageRoute(builder: (context) => HomePage()),
           (route) => false);
     } else {
-      print("Some error happend");
+      showToast(message: "Terjadi error");
     }
   }
 }

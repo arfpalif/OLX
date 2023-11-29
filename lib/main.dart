@@ -1,10 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/View/Page/Homepage.dart';
 import 'package:flutter_application_1/View/Page/LoginPage.dart';
-import 'package:flutter_application_1/View/Page/PropertyShop.dart';
-import 'package:flutter_application_1/View/Page/SignUpPage.dart';
 import 'package:flutter_application_1/View/Page/SplashPage.dart';
 
 Future main() async {
@@ -18,7 +15,7 @@ Future main() async {
             projectId: "olx-apps-1e931"));
   } else {
     await Firebase.initializeApp();
-  } 
+  }
   runApp(MyApp());
 }
 

@@ -11,7 +11,7 @@ class SplashPage extends StatefulWidget {
 class _SplashScreenState extends State<SplashPage> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 2), () {
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (context) => widget.child!),

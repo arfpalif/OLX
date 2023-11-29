@@ -8,6 +8,7 @@ import 'package:flutter_application_1/Model/Theme.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+// ignore: must_be_immutable
 class profile extends StatelessWidget {
   imagePickerController controller = Get.put(imagePickerController());
 
